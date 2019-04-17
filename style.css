@@ -1,0 +1,42 @@
+.cirlce {
+    background-color: rgb(0, 128, 28);
+    border-radius: 50%;
+    display: inline-block;
+    margin: -10px;
+    height: 40px;
+    width: 40px;
+}
+
+.circle:nth-of-type(2) {
+    background-color: palevioletred;
+}
+
+.loading-container {
+    animation: rotate 3s linear infinite;
+    height: 50px;
+    transform-origin: bottom center;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle {
+    /* The css from above */
+
+    /* new css */
+    animation: grow 1.5s linear infinite;
+    transform: scale(0);
+}
+
+.circle:nth-of-type(2) {
+    animation-delay: 0.75s;
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1);
+    }
+}
